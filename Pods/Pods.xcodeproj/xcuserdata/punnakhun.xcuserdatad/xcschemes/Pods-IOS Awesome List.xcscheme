@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4759437A1EF23C9100DA9CAD"
-               BuildableName = "IOS Awesome List.app"
-               BlueprintName = "IOS Awesome List"
-               ReferencedContainer = "container:IOS Awesome List.xcodeproj">
+               BlueprintIdentifier = "66B98FAE83157CEFE65B299871580645"
+               BuildableName = "Pods_IOS_Awesome_List.framework"
+               BlueprintName = "Pods-IOS Awesome List"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4759437A1EF23C9100DA9CAD"
-            BuildableName = "IOS Awesome List.app"
-            BlueprintName = "IOS Awesome List"
-            ReferencedContainer = "container:IOS Awesome List.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4759437A1EF23C9100DA9CAD"
-            BuildableName = "IOS Awesome List.app"
-            BlueprintName = "IOS Awesome List"
-            ReferencedContainer = "container:IOS Awesome List.xcodeproj">
+            BlueprintIdentifier = "66B98FAE83157CEFE65B299871580645"
+            BuildableName = "Pods_IOS_Awesome_List.framework"
+            BlueprintName = "Pods-IOS Awesome List"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4759437A1EF23C9100DA9CAD"
-            BuildableName = "IOS Awesome List.app"
-            BlueprintName = "IOS Awesome List"
-            ReferencedContainer = "container:IOS Awesome List.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

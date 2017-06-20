@@ -10,15 +10,34 @@ import UIKit
 
 class AdsTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var adsImage: UIImageView!
+    
+    func configureCell(data: Data) {
+        configureImage(imageUrl: data.cover)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private func configureImage(imageUrl : String) {
+        
+        let url = URL(string: imageUrl)
+        let urlRequest = URLRequest(url: url!)
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        
+        session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+            // do stuff with response, data & error here
+            if error != nil {
+                print(error!)
+            }
+            DispatchQueue.global(qos: .userInitiated).async {
+                let image = data
+                // Bounce back to the main thread to update the UI
+                DispatchQueue.main.async {
+                    self.adsImage.image = UIImage(data: image!)
+                    
+                }
+            }
+        }).resume()
     }
 
 }

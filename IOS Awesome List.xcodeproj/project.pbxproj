@@ -12,9 +12,15 @@
 		475943841EF23C9100DA9CAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475943821EF23C9100DA9CAD /* Main.storyboard */; };
 		475943861EF23C9100DA9CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475943851EF23C9100DA9CAD /* Assets.xcassets */; };
 		475943891EF23C9100DA9CAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475943871EF23C9100DA9CAD /* LaunchScreen.storyboard */; };
+		475943921EF240E700DA9CAD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475943911EF240E700DA9CAD /* Data.swift */; };
+		475943951EF24BAF00DA9CAD /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475943941EF24BAF00DA9CAD /* TrackTableViewCell.swift */; };
+		475943971EF2527100DA9CAD /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475943961EF2527100DA9CAD /* VideoTableViewCell.swift */; };
+		475943991EF262BE00DA9CAD /* AdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475943981EF262BE00DA9CAD /* AdsTableViewCell.swift */; };
+		8DD015917CF1B03AA091E8EB /* Pods_IOS_Awesome_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EC23D731F165D5D9AFA057 /* Pods_IOS_Awesome_List.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		392AA0A76C3A967D75FE634F /* Pods-IOS Awesome List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS Awesome List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOS Awesome List/Pods-IOS Awesome List.debug.xcconfig"; sourceTree = "<group>"; };
 		4759437B1EF23C9100DA9CAD /* IOS Awesome List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS Awesome List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4759437E1EF23C9100DA9CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		475943801EF23C9100DA9CAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,12 @@
 		475943851EF23C9100DA9CAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		475943881EF23C9100DA9CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4759438A1EF23C9100DA9CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		475943911EF240E700DA9CAD /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		475943941EF24BAF00DA9CAD /* TrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		475943961EF2527100DA9CAD /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		475943981EF262BE00DA9CAD /* AdsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsTableViewCell.swift; sourceTree = "<group>"; };
+		A417E12DE43095F27E459DCB /* Pods-IOS Awesome List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS Awesome List.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOS Awesome List/Pods-IOS Awesome List.release.xcconfig"; sourceTree = "<group>"; };
+		F6EC23D731F165D5D9AFA057 /* Pods_IOS_Awesome_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOS_Awesome_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD015917CF1B03AA091E8EB /* Pods_IOS_Awesome_List.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28AA0578D8FDB950CBF11913 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				392AA0A76C3A967D75FE634F /* Pods-IOS Awesome List.debug.xcconfig */,
+				A417E12DE43095F27E459DCB /* Pods-IOS Awesome List.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		475943721EF23C9100DA9CAD = {
 			isa = PBXGroup;
 			children = (
 				4759437D1EF23C9100DA9CAD /* IOS Awesome List */,
 				4759437C1EF23C9100DA9CAD /* Products */,
+				28AA0578D8FDB950CBF11913 /* Pods */,
+				C2346D92926DD0E7D0A67234 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +78,50 @@
 		4759437D1EF23C9100DA9CAD /* IOS Awesome List */ = {
 			isa = PBXGroup;
 			children = (
+				4759439A1EF2639500DA9CAD /* Controller */,
+				475943931EF24B9400DA9CAD /* View */,
+				475943901EF240B100DA9CAD /* Model */,
 				4759437E1EF23C9100DA9CAD /* AppDelegate.swift */,
-				475943801EF23C9100DA9CAD /* ViewController.swift */,
 				475943821EF23C9100DA9CAD /* Main.storyboard */,
 				475943851EF23C9100DA9CAD /* Assets.xcassets */,
 				475943871EF23C9100DA9CAD /* LaunchScreen.storyboard */,
 				4759438A1EF23C9100DA9CAD /* Info.plist */,
 			);
 			path = "IOS Awesome List";
+			sourceTree = "<group>";
+		};
+		475943901EF240B100DA9CAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				475943911EF240E700DA9CAD /* Data.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		475943931EF24B9400DA9CAD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				475943941EF24BAF00DA9CAD /* TrackTableViewCell.swift */,
+				475943961EF2527100DA9CAD /* VideoTableViewCell.swift */,
+				475943981EF262BE00DA9CAD /* AdsTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4759439A1EF2639500DA9CAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				475943801EF23C9100DA9CAD /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C2346D92926DD0E7D0A67234 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6EC23D731F165D5D9AFA057 /* Pods_IOS_Awesome_List.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4759438D1EF23C9100DA9CAD /* Build configuration list for PBXNativeTarget "IOS Awesome List" */;
 			buildPhases = (
+				EF58A55DE645EDBDC821B065 /* [CP] Check Pods Manifest.lock */,
 				475943771EF23C9100DA9CAD /* Sources */,
 				475943781EF23C9100DA9CAD /* Frameworks */,
 				475943791EF23C9100DA9CAD /* Resources */,
+				FA37084B71676D05576E3574 /* [CP] Embed Pods Frameworks */,
+				0860015C56AFCA6F5834EEBC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +195,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0860015C56AFCA6F5834EEBC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IOS Awesome List/Pods-IOS Awesome List-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF58A55DE645EDBDC821B065 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FA37084B71676D05576E3574 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IOS Awesome List/Pods-IOS Awesome List-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		475943771EF23C9100DA9CAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				475943811EF23C9100DA9CAD /* ViewController.swift in Sources */,
+				475943921EF240E700DA9CAD /* Data.swift in Sources */,
 				4759437F1EF23C9100DA9CAD /* AppDelegate.swift in Sources */,
+				475943951EF24BAF00DA9CAD /* TrackTableViewCell.swift in Sources */,
+				475943991EF262BE00DA9CAD /* AdsTableViewCell.swift in Sources */,
+				475943971EF2527100DA9CAD /* VideoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +374,7 @@
 		};
 		4759438E1EF23C9100DA9CAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 392AA0A76C3A967D75FE634F /* Pods-IOS Awesome List.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K2PZ7TCWB5;
@@ -272,6 +388,7 @@
 		};
 		4759438F1EF23C9100DA9CAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A417E12DE43095F27E459DCB /* Pods-IOS Awesome List.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K2PZ7TCWB5;
@@ -302,6 +419,7 @@
 				4759438F1EF23C9100DA9CAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

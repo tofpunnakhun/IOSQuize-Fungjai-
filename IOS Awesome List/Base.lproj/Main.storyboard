@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOS_Awesome_List" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,115 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hu3-aP-KWK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrackTableViewCell" rowHeight="104" id="xc5-ZJ-zxZ" customClass="TrackTableViewCell" customModule="IOS_Awesome_List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xc5-ZJ-zxZ" id="lSi-lT-bB8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="103.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-music" translatesAutoresizingMaskIntoConstraints="NO" id="Lcb-WF-ymb">
+                                                    <rect key="frame" x="15" y="11" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="RZj-8k-Tcb"/>
+                                                        <constraint firstAttribute="height" constant="80" id="wDZ-T7-UjU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXu-bs-FYV">
+                                                    <rect key="frame" x="103" y="41" width="264" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="sXu-bs-FYV" secondAttribute="bottom" constant="33.5" id="4Zc-T1-jZw"/>
+                                                <constraint firstItem="sXu-bs-FYV" firstAttribute="top" secondItem="lSi-lT-bB8" secondAttribute="topMargin" constant="33" id="KMt-fY-JKI"/>
+                                                <constraint firstItem="sXu-bs-FYV" firstAttribute="leading" secondItem="Lcb-WF-ymb" secondAttribute="trailing" constant="8" id="e9l-oe-GMF"/>
+                                                <constraint firstItem="Lcb-WF-ymb" firstAttribute="leading" secondItem="lSi-lT-bB8" secondAttribute="leading" constant="15" id="oCG-F4-pmX"/>
+                                                <constraint firstAttribute="bottom" secondItem="Lcb-WF-ymb" secondAttribute="bottom" constant="12.5" id="r4l-nw-2sQ"/>
+                                                <constraint firstItem="sXu-bs-FYV" firstAttribute="trailing" secondItem="lSi-lT-bB8" secondAttribute="trailingMargin" id="u5k-vX-3mp"/>
+                                                <constraint firstItem="Lcb-WF-ymb" firstAttribute="top" secondItem="lSi-lT-bB8" secondAttribute="top" constant="11" id="wxs-mt-P7K"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="trackImage" destination="Lcb-WF-ymb" id="DSv-2y-RfM"/>
+                                            <outlet property="trackName" destination="sXu-bs-FYV" id="r8M-LN-ST4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoTableViewCell" rowHeight="274" id="cek-nM-NEd" customClass="VideoTableViewCell" customModule="IOS_Awesome_List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="274"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cek-nM-NEd" id="WSs-Qk-T4d">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="273.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-music" translatesAutoresizingMaskIntoConstraints="NO" id="u3b-yj-rUf">
+                                                    <rect key="frame" x="37" y="-14" width="300" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="NTj-ko-ClD"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="u3b-yj-rUf" firstAttribute="centerX" secondItem="WSs-Qk-T4d" secondAttribute="centerX" id="W1W-9Q-g59"/>
+                                                <constraint firstItem="u3b-yj-rUf" firstAttribute="centerY" secondItem="WSs-Qk-T4d" secondAttribute="centerY" id="sY0-Fy-zCj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoImage" destination="u3b-yj-rUf" id="gYy-T6-Bb6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdsTableViewCell" rowHeight="211" id="rJE-fw-9tU" customClass="AdsTableViewCell" customModule="IOS_Awesome_List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="406" width="375" height="211"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rJE-fw-9tU" id="9VJ-hg-GV3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="210.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-music" translatesAutoresizingMaskIntoConstraints="NO" id="gwc-it-msk">
+                                                    <rect key="frame" x="37.5" y="30.5" width="300" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="S5y-sm-9s0"/>
+                                                        <constraint firstAttribute="height" constant="150" id="ane-1E-p6g"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gwc-it-msk" firstAttribute="centerY" secondItem="9VJ-hg-GV3" secondAttribute="centerY" id="D4N-ua-t6G"/>
+                                                <constraint firstItem="gwc-it-msk" firstAttribute="centerX" secondItem="9VJ-hg-GV3" secondAttribute="centerX" id="Xfq-60-0jV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="adsImage" destination="gwc-it-msk" id="So2-yv-mZg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Hu3-aP-KWK" secondAttribute="trailing" id="DHc-Xg-vya"/>
+                            <constraint firstItem="Hu3-aP-KWK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="E98-kh-V4G"/>
+                            <constraint firstItem="Hu3-aP-KWK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="b9i-t2-cYR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hu3-aP-KWK" secondAttribute="bottom" id="vTP-VK-KcF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Hu3-aP-KWK" id="zjp-RA-sbd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="default-music" width="300" height="300"/>
+    </resources>
 </document>
